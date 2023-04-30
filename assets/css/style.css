@@ -58,6 +58,20 @@ img{
 .btn-light{
     border-color: var(--c-dark);
 }
+.image-zoom{
+    position: relative;
+    overflow: hidden;
+}
+.image-zoom-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.image-zoom-wrapper img{
+    transition: var(--transition);
+}
+.image-zoom:hover .image-zoom-wrapper img{
+    transform: scale(1.1);   
+}
 /**NAVBAR**/
 .navbar-brand{
     font-size: 30px;
@@ -128,4 +142,132 @@ img{
 .service:hover .iconbox{
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
+}
+/**COUNTER**/
+#counter{
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)), url(../images/counter.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+/**PORTFOLIO**/
+.portfolio-item .iconbox{
+    background-color: var(--c-brand);
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.portfolio-item:hover .iconbox{
+    opacity: 1;
+    top: 50%;
+}
+/**REVIEWS**/
+.review-head{
+    position: relative;
+}
+.review-head::after{
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    bottom: -14px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+.review small{
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--c-brand);
+}
+/**TEAM**/
+.team-member-content{
+    background-color: var(--c-brand);
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    width: calc(100% - 50px);
+    transform: translateX(-50%);
+    padding: 24px;
+    transition: var(--transition);
+    opacity: 0;
+}
+.team-member:hover .team-member-content{
+    opacity: 1;
+    bottom: 25px;
+}
+/**CONTACT**/
+#contact{
+    position: relative;
+    z-index: 2;
+}
+#contact::after{
+    content: "";
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)), url(../images/hero-2.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#contact .form-conrtol{
+    outline: none;
+    border-radius: 0;
+}
+#contact .form-control:focus{
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+/****/
+footer{
+    padding-top: 100px;
+}
+footer .logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+footer .logo strong{
+    color: var(--c-brand);
+}
+footer li , footer p ,footer a{
+    color: rgba(255, 255, 255, 0.2);
+}
+footer ul{
+    list-style: none;
+    padding:0
+}
+footer .line{
+    width: 40px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+.footer-top{
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-bottom{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+}
+.social-icons a:hover{
+    background-color: var(--c-brand);
+    color: white;
+}
+footer a:hover{
+    color: var(--c-brand);
 }
